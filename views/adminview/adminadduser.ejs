@@ -1,0 +1,56 @@
+<%-include('../partials/header.ejs')-%>
+<%-include('../partials/header.ejs')-%>
+
+<div class="container mt-5 allclass">
+    <div class="d-flex justify-content-center ">
+   <h1>Add User</h1>
+
+
+ </div>
+
+    <div class="d-flex justify-content-center">
+
+
+<form action="/admin/adduser" method="POST" >
+  <%if(loginerr){%>
+    <p class="h1 " style="color: red;"><%=loginerr%></p>
+    <%}%>
+    <!-- userName input -->
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form5Example1">UserName</label>
+      <input type="text" id="form5Example1" name="username" placeholder="username" class="form-control" />
+    
+    </div>
+  
+    <!-- password input -->
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form5Example2">Password</label>
+      <input type="password" id="form5Example2" name="password" placeholder="Password" class="form-control" />
+     
+    </div>
+
+    <!-- name -->
+
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form5Example2">Name</label>
+    <input type="text" id="form5Example2" name="name" placeholder="Name" class="form-control" />
+   
+  </div>
+
+    <!-- Email -->
+
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form5Example2">Email</label>
+  <input type="email" id="form5Example2" name="email" placeholder="Email" class="form-control" />
+ 
+</div>
+   
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Submit</button>
+  </form>
+</div>
+</div>
+
+
+<%-include('../partials/footer.ejs')-%>

@@ -1,0 +1,29 @@
+body {
+  width: 100%;
+  
+  /* background-image: url(../images/image11.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  */
+  background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  
+}
+
+a {
+ text-decoration: none!important;
+ color: black
+} 
+#home{
+  margin-top: 5%;
+}
+/* .home{
+  background-color: aqua;
+  height: 70vh;
+}
+
+ */
+.error{
+  width: 100%;
+  margin: 1px;
+}

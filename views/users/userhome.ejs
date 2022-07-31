@@ -1,0 +1,16 @@
+<%-include('../partials/header.ejs')-%>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12"></div>
+  <div class="text-center center-div" id="loginhere" style= "width: 100%; height: 100vh;">
+    <h1 style="color: rgb(0, 0, 0);">WELCOME  HOME</h1>
+      <div class="container w-50 border py-5 mt-5 " id="sectinw"  >
+      <h3 class="pb-4" style="color: green;">Welcome to home </h3>
+      <h5 class="h2 pb-5"><%=locals.username?username:'User'%></h5>
+      <a href="/users/logout" class="btn btn-primary mt-4 fs-5">Logout</a>
+  
+  </div>
+  </div>
+  </div>
+  </div>
+<%-include('../partials/header.ejs')-%>

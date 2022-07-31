@@ -1,0 +1,44 @@
+<%-include('../partials/header.ejs')-%>
+
+
+<section>
+<div class="container ">
+  <div class="row m-5">
+    <a href="/admin/logout" class="btn btn-danger " style="width: 100px; height: 50px; margin-right: auto;">Logout</a>
+  <a href="/admin/adduser" class="btn btn-success " style="width: 100px; height: 50px; margin-left: auto;">Add User</a>
+</div>
+  <table class="table m-5" id="sampletable">
+    <thead>
+      <tr>
+        
+        <th scope="col">UserName</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%userdisplay.forEach(function(userdisplay){%>
+      <tr>
+     
+        <td><%=userdisplay.username%></td>
+        <td><%=userdisplay.name%></td>
+        <td><%=userdisplay.email%></td>
+        <td><a class="btn btn-primary" href="/admin/edituser/<%=userdisplay._id%>">Edit</a>
+        <a class="btn btn-danger" href="/admin/deleteuser/<%=userdisplay._id%>" onclick="return confirm('are you sure to delete<%=userdisplay.name%>')" >Delete</a></td>
+    
+       </tr>
+       <%});%>
+      
+    </tbody>
+  </table>
+</div>
+</section>
+
+<script>
+  $(function () {
+    $('#sampletable').DataTable();
+} )
+</script>
+
+<%-include('../partials/header.ejs')-%>

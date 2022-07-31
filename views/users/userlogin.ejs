@@ -1,0 +1,68 @@
+<%-include('../partials/header.ejs')-%>
+
+<!-- <div class="container col-6 mt-3">
+    <div class="secondary text-center">
+<h2>Login</h2>
+    </div>
+    <div class="col-12 ">
+        <div class="col-lg-12  div-center text-center" > -->
+<div class="container">
+
+<div class="d-flex justify-content-center flex-column " id="home">
+    <h1 class="text-center">User Login</h1>
+    <div class="d-flex justify-content-center  " id="home">
+
+<form method="POST" action="/users/login">
+
+  <%if(invalid){%>
+    <p class="h1 " style="color: red;"><%=invalid%></p>
+    <%}%>
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+        <label class="form-label " for="form2Example1">email</label>
+      <input type="text" id="form2Example1" name="email" placeholder="username" class="form-control" />
+    
+    </div>
+  
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example2">Password</label>
+      <input type="password" id="form2Example2" placeholder="password" name="password" class="form-control" />
+  
+    </div>
+  
+    <!-- 2 column grid layout for inline styling -->
+ 
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+  
+    <!-- Register buttons -->
+    <div class="text-center">
+      <p>Not a member? <a href="/users/signup">Register</a></p>
+      
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-google"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-twitter"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-github"></i>
+      </button>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+<!-- </div>
+</div>
+</div> -->
+
+<%-include('../partials/footer.ejs')-%>
